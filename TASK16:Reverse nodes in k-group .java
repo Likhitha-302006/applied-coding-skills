@@ -16,10 +16,10 @@ class Solution {
                 }
             }
 
-            // Save the start of the next group
+     
             ListNode nextGroupStart = currentNode.next;
 
-            // Reverse the current group
+
             ListNode groupStart = previousGroupTail.next;
             ListNode prev = nextGroupStart;
             ListNode current = groupStart;
@@ -31,10 +31,9 @@ class Solution {
                 current = next;
             }
 
-            // Connect previous group to reversed group
             previousGroupTail.next = currentNode;
 
-            // Move to the next group
+    
             previousGroupTail = groupStart;
         }
     }
